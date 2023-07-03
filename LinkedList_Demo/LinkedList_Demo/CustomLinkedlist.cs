@@ -54,5 +54,14 @@ namespace LinkedList_Demo
                 head.next = temp;
             }
         }
+        public void RemoveFirst()
+        {
+            if(head == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+            }
+            head=head.next;
+            Console.WriteLine("First element Deleted successfully");
+        }
     }
 }

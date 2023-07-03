@@ -10,15 +10,16 @@ namespace LinkedList_Demo
     {
         static void Main(string[] args)
         {
-            //CustomLinkedlist customLinkedlist = new CustomLinkedlist();
+            CustomLinkedlist customLinkedlist = new CustomLinkedlist();
             while (true)
             {
-                CustomLinkedlist customLinkedlist = new CustomLinkedlist();
+               
                 Console.WriteLine("Please select any one program from below options\n");
                 Console.WriteLine("1.Built-in LinkedlistDemo");
                 Console.WriteLine("2.stack_Demo");
                 Console.WriteLine("3.CustomLinked list");
                 Console.WriteLine("4.Add Node in Reverse");
+                Console.WriteLine("5.Remove First Node");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -36,13 +37,16 @@ namespace LinkedList_Demo
                         customLinkedlist.Add(4);
                         customLinkedlist.Add(50);
                         customLinkedlist.Add(32);
-                        customLinkedlist.Display();
-                        
+                        customLinkedlist.Display();                       
                         break;
                     case 4:
                         customLinkedlist.ReverseOrder(11);
                         customLinkedlist.ReverseOrder(22);
                         customLinkedlist.ReverseOrder(33);
+                        customLinkedlist.Display();                       
+                        break;
+                    case 5:
+                        customLinkedlist.RemoveFirst();
                         customLinkedlist.Display();
                         break;
                     default:
