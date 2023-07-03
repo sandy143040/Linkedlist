@@ -30,14 +30,28 @@ namespace LinkedList_Demo
         public void Display()
         {
             Node temp = head;
-            if(temp==null)
+            if (temp == null)
             {
                 Console.WriteLine("Linkedlist is Empty");
             }
-            while(temp!=null)
+            while (temp != null)
             {
-                Console.Write(temp.data+" ");
+                Console.Write(temp.data + "->");
                 temp = temp.next;
+            }
+        }
+        public void ReverseOrder(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+                head = node;
+                head.next = temp;
             }
         }
     }
