@@ -33,6 +33,7 @@ namespace LinkedList_Demo
                         customLinkedlist.Add(4);
                         customLinkedlist.Add(50);
                         customLinkedlist.Add(32);
+                        customLinkedlist.Display();
                         break;
                     default:
                         Console.WriteLine("Enter valid input");

@@ -25,7 +25,20 @@ namespace LinkedList_Demo
                 }
                 temp.next = node;
             }
-            Console.Write(node.data+"->");
+            Console.WriteLine("Node is Added :" + node.data);
+        }
+        public void Display()
+        {
+            Node temp = head;
+            if(temp==null)
+            {
+                Console.WriteLine("Linkedlist is Empty");
+            }
+            while(temp!=null)
+            {
+                Console.Write(temp.data+" ");
+                temp = temp.next;
+            }
         }
     }
 }
