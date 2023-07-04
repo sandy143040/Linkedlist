@@ -20,8 +20,9 @@ namespace LinkedList_Demo
                 Console.WriteLine("3.CustomLinked list");
                 Console.WriteLine("4.Add Node in Reverse");
                 Console.WriteLine("5.Remove First Node");
+                Console.WriteLine("6.Remove Last Node");
                 int option = Convert.ToInt32(Console.ReadLine());
-                switch(option)
+                switch (option)
                 {
                     case 1:
                         LinkedlistDemo list = new LinkedlistDemo();
@@ -47,6 +48,10 @@ namespace LinkedList_Demo
                         break;
                     case 5:
                         customLinkedlist.RemoveFirst();
+                        customLinkedlist.Display();
+                        break;
+                    case 6:
+                        customLinkedlist.RemoveLast();
                         customLinkedlist.Display();
                         break;
                     default:
