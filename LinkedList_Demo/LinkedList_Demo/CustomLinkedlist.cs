@@ -69,6 +69,10 @@ namespace LinkedList_Demo
             {
                 Console.WriteLine("LinkedList is empty");
             }
+            if(head.next == null)
+            {
+                Console.WriteLine("single element is present");
+            }
             else
             {
                 Node temp = head;
@@ -79,6 +83,40 @@ namespace LinkedList_Demo
                 temp.next = null;
                 Console.WriteLine("Deleted last Node");
             }
+        }
+        public void Size()
+        {
+            if(head ==null)
+            {
+                Console.WriteLine("Linkedlist is empty");
+            }
+            Node temp = head;
+            int count = 1;
+            while (temp.next != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            Console.WriteLine("size of linkedlist is " +count);
+        }
+        public int Search(int value)
+        {
+            Node node = head;
+            if(node == null)
+            {
+                return -1;
+            }
+            int count = 0;
+            while (node != null)
+            {
+                if(node.data == value)
+                {
+                    return count;
+                }
+                node = node.next;
+                count++;
+            }
+            return count; 
         }
     }
 }
