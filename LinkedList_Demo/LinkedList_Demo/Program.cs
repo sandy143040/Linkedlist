@@ -25,7 +25,8 @@ namespace LinkedList_Demo
                 Console.WriteLine("8.Search");
                 Console.WriteLine("9.Add node at Middle");
                 Console.WriteLine("10.Reverse Linkedlist");
-                Console.WriteLine("11.Stack Operation");
+                Console.WriteLine("11.Stack Operations");
+                Console.WriteLine("12.Queue operations");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -87,6 +88,16 @@ namespace LinkedList_Demo
                         stackLinkedlist.pop();
                         Console.WriteLine("===================================");
                         stackLinkedlist.Display();
+                        break;
+                    case 12:
+                        QueueLinkedlist queueLinkedlist = new QueueLinkedlist();
+                        queueLinkedlist.Enqueue(10);
+                        queueLinkedlist.Enqueue(20);
+                        queueLinkedlist.Enqueue(30);
+                        queueLinkedlist.Display();
+                        Console.WriteLine("--------------");
+                        queueLinkedlist.Dequeue();
+                        queueLinkedlist.Display();
                         break;
                     default:
                         Console.WriteLine("Enter valid input");
