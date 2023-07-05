@@ -23,6 +23,8 @@ namespace LinkedList_Demo
                 Console.WriteLine("6.Remove Last Node");
                 Console.WriteLine("7.Size of linkedlist");
                 Console.WriteLine("8.Search");
+                Console.WriteLine("9.Add node at Middle");
+                Console.WriteLine("10.Reverse Linkedlist");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -63,6 +65,14 @@ namespace LinkedList_Demo
                     case 8:
                         int val = customLinkedlist.Search(11);
                         Console.WriteLine("present at index position: " +val);
+                        break;
+                    case 9:
+                        customLinkedlist.AddMiddle(2, 50);
+                        customLinkedlist.Display();
+                        break;
+                    case 10:
+                        customLinkedlist.ReverseLinkedlist();
+                        customLinkedlist.Display();
                         break;
                     default:
                         Console.WriteLine("Enter valid input");

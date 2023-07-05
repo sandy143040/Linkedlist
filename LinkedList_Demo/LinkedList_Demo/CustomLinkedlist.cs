@@ -39,19 +39,22 @@ namespace LinkedList_Demo
                 Console.Write(temp.data + "->");
                 temp = temp.next;
             }
+            Console.WriteLine("null");
         }
         public void ReverseOrder(int data)
         {
-            Node node = new Node(data);
+            Node newNode = new Node(data);
             if (head == null)
             {
-                head = node;
+                head = newNode;
             }
             else
             {
-                Node temp = head;
-                head = node;
-                head.next = temp;
+                //Node temp = head;
+                //head = node;
+                //head.next = temp;
+                newNode.next = head;
+                head = newNode;
             }
         }
         public void RemoveFirst()
@@ -117,6 +120,34 @@ namespace LinkedList_Demo
                 count++;
             }
             return count; 
+        }
+        public void AddMiddle(int idx, int data)
+        {
+            Node newNode = new Node(data);
+            Node temp = head;
+            int index = 0;
+            while(index < idx - 1)
+            {
+                temp = temp.next;
+                index++;
+            }
+            //index = idx-1; temp->prev
+            newNode.next = temp.next;
+            temp.next = newNode;
+        }
+        public void ReverseLinkedlist()
+        {
+            Node prev = null;            
+            Node curr = head;
+            Node next;
+            while(curr != null)
+            {
+                next = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = next;
+            }
+            head = prev;
         }
     }
 }
