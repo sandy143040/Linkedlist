@@ -25,6 +25,7 @@ namespace LinkedList_Demo
                 Console.WriteLine("8.Search");
                 Console.WriteLine("9.Add node at Middle");
                 Console.WriteLine("10.Reverse Linkedlist");
+                Console.WriteLine("11.Stack Operation");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -73,6 +74,19 @@ namespace LinkedList_Demo
                     case 10:
                         customLinkedlist.ReverseLinkedlist();
                         customLinkedlist.Display();
+                        break;
+                    case 11:
+                        StackLinkedlist stackLinkedlist = new StackLinkedlist();
+                        stackLinkedlist.Push(10);
+                        stackLinkedlist.Push(25);
+                        stackLinkedlist.Push(40);
+                        stackLinkedlist.Display();
+                        Console.WriteLine("\n==================================");
+                        stackLinkedlist.peek();
+                        Console.WriteLine("================================== ");
+                        stackLinkedlist.pop();
+                        Console.WriteLine("===================================");
+                        stackLinkedlist.Display();
                         break;
                     default:
                         Console.WriteLine("Enter valid input");
